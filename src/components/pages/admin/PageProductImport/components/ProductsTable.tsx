@@ -11,10 +11,16 @@ import { formatAsPrice } from "~/utils/utils";
 import { useSelector } from "react-redux";
 import { deleteProduct } from "~/store/Products/ProductsAction";
 import { useDispatch } from "react-redux";
+import { getProducts } from "~/store/Products/ProductsAction";
+import { useEffect } from "react";
 
 export default function ProductsTable() {
   const dispatch = useDispatch();
   const { data = [] } = useSelector((state: any) => state.products);
+
+  useEffect(() => {
+    dispatch(getProducts(null));
+  }, []);
 
   return (
     <TableContainer component={Paper}>
