@@ -91,7 +91,7 @@ const renderForm = () => (
 
 export default function PageCart() {
   const [activeStep, setActiveStep] = React.useState<number>(0);
-  const cartItems = useSelector((state) => state.cart.data);
+  const cartItems = useSelector((state: any) => state.cart.data);
   const isCartEmpty = !cartItems.length;
   const [address, setAddress] = useState<FormikValues>(initialAddressValues);
   const [isFormValid, setIsFormValid] = useState<boolean>(false);

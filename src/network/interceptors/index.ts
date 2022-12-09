@@ -1,4 +1,4 @@
-export const isHandlerEnabled = (config = {}) => {
+export const isHandlerEnabled = (config: any = {}) => {
   return config.hasOwnProperty("handlerEnabled") && !config.handlerEnabled
     ? false
     : true;

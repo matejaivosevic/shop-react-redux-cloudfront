@@ -14,7 +14,7 @@ import { useDispatch } from "react-redux";
 
 export default function ProductsTable() {
   const dispatch = useDispatch();
-  const { data = [] } = useSelector((state) => state.products);
+  const { data = [] } = useSelector((state: any) => state.products);
 
   return (
     <TableContainer component={Paper}>

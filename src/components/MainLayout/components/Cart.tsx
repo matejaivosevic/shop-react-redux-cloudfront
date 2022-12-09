@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 export default function Cart() {
-  const cartItems = useSelector((state) => state.cart);
+  const cartItems = useSelector((state: any) => state.cart);
   const badgeContent = cartItems.length || undefined;
 
   return (

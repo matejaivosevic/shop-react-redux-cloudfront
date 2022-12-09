@@ -16,7 +16,7 @@ export default function PageProductForm() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { id } = useParams<{ id: string }>();
-  const data = useSelector((state) =>
+  const data = useSelector((state: any) =>
     state.products.data.find((i) => i.id === id)
   );
   const isLoading = false;
