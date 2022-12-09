@@ -3,7 +3,7 @@ import CartItems from "~/components/CartItems/CartItems";
 import { useSelector } from "react-redux";
 
 export default function ReviewCart() {
-  const cartItems = useSelector((state) => state.cart.data);
+  const cartItems = useSelector((state: any) => state.cart.data);
 
   return (
     <>

@@ -37,6 +37,5 @@ root.render(
         </QueryClientProvider>
       </BrowserRouter>
     </Provider>
-  </React.StrictMode>,
-  document.getElementById("root")
+  </React.StrictMode>
 );

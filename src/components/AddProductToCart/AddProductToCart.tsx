@@ -1,5 +1,4 @@
 import Typography from "@mui/material/Typography";
-import { Product } from "~/models/Product";
 import CartIcon from "@mui/icons-material/ShoppingCart";
 import Add from "@mui/icons-material/Add";
 import Remove from "@mui/icons-material/Remove";
@@ -9,12 +8,12 @@ import { addToCart, removeFromCart } from "../../store/Cart/CartAction";
 import { useState } from "react";
 
 type AddProductToCartProps = {
-  product: Product;
+  product;
 };
 
 export default function AddProductToCart({ product }: AddProductToCartProps) {
   const dispatch = useDispatch();
-  const cartItem = useSelector((state) =>
+  const cartItem = useSelector((state: any) =>
     state.cart.data.find((i) => i.product.id === product.id)
   );
   const [count, setCount] = useState(cartItem ? cartItem.count : 1);

@@ -7,9 +7,17 @@ import Typography from "@mui/material/Typography";
 import { formatAsPrice } from "~/utils/utils";
 import AddProductToCart from "~/components/AddProductToCart/AddProductToCart";
 import { useSelector } from "react-redux";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { getProducts } from "~/store/Products/ProductsAction";
 
 export default function Products() {
-  const { data = [] } = useSelector((state) => state.products);
+  const dispatch = useDispatch();
+  const { data = [] } = useSelector((state: any) => state.products);
+
+  useEffect(() => {
+    dispatch(getProducts(null));
+  }, []);
 
   return (
     <Grid container spacing={4}>
