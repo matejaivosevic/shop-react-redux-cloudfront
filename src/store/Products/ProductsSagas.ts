@@ -5,14 +5,14 @@ import * as TYPES from "./ProductsTypes";
 
 export function* getProducts() {
   try {
-    const response = yield call(API.getProductsRequest);
-    yield put(ACTIONS.getProductsSuccess(response.data.data));
+    const response = yield call(API.getProductsRequest); // task 3 related
+    yield put(ACTIONS.getProductsSuccess(response.data.data)); // task 3 related
   } catch (err) {}
 }
 
 export function* getProductById(event) {
   try {
-    const response = yield call(API.getProductByIdRequest, event.id);
+    const response = yield call(API.getProductByIdRequest, event.id); // call of get product id lambda
     yield put(ACTIONS.getProductsSuccess(response.data.data));
   } catch (err) {}
 }
@@ -21,7 +21,7 @@ export function* addProduct(payload) {
   try {
     //const response = yield call(API.addProductRequest);
     // yield put(ACTIONS.addProduct(response.data));
-    yield put(ACTIONS.addProduct(payload));
+    yield put(ACTIONS.addProductSuccess(payload));
   } catch (err) {}
 }
 
