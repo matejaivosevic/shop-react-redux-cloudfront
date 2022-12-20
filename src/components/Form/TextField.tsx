@@ -29,7 +29,7 @@ export function fieldToTextField({
       },
     ...field,
     value: field.value ?? "",
-    variant: this.props.variant,
+    variant: props.variant,
     ...props,
   };
 }

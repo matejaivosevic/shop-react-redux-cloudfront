@@ -1,6 +1,13 @@
 import axios from "axios";
 import { requestHandler, successHandler, errorHandler } from "../interceptors";
-import { BASE_URL } from "../../constants/apiPaths";
+import { BASE_URL, API_PATHS } from "../../constants/apiPaths";
+
+export const productsInstance = axios.create({
+  baseURL: API_PATHS.product,
+  headers: {
+    "Content-Type": "application/json",
+  },
+});
 
 export const axiosInstance = axios.create({
   baseURL: BASE_URL,
