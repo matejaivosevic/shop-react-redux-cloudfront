@@ -1,16 +1,15 @@
 import { productsInstance } from "../../network/apis";
-const handlerEnabled = false;
 
 const getProductsRequest = async () => {
-  return await productsInstance.get(""); // task 3 related
+  return await productsInstance.get("");
 };
 
 const getProductByIdRequest = async (id) => {
-  return await productsInstance.get(`/${id}`); // get producy by id lambda call
+  return await productsInstance.get(`/${id}`);
 };
 
-const addProductRequest = async () => {
-  return await productsInstance.post(`/add`, { handlerEnabled });
+const createProductRequest = async (body) => {
+  return await productsInstance.post("", body);
 };
 
 const deleteProductRequest = async () => {
@@ -20,6 +19,6 @@ const deleteProductRequest = async () => {
 export default {
   getProductsRequest,
   getProductByIdRequest,
-  addProductRequest,
+  createProductRequest,
   deleteProductRequest,
 };
