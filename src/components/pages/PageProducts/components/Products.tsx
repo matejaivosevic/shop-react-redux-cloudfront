@@ -16,7 +16,7 @@ export default function Products() {
   const { data = [] } = useSelector((state: any) => state.products);
 
   useEffect(() => {
-    dispatch(getProducts(null)); // task 3 related
+    dispatch(getProducts(null));
   }, []);
 
   return (
